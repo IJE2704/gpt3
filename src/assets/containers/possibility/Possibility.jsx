@@ -1,10 +1,10 @@
 import React from 'react';
-import './possiblillity.css';
+import './possibility.css';
 
 const Possibility = () => {
   return (
     <div>
-      
+      <h1>possibillity</h1>
     </div>
   );
 };

@@ -1,35 +1,31 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
-
+import "./App.css";
+import Navbar from "./assets/Components/navbar/Navbar";
+import Header from "./assets/containers/header/Header";
+import Brand from "./assets/Components/brand/Brand";
+import WhatGpt3 from "./assets/containers/whatGPT3/WhatGpt3";
+import Features from "./assets/containers/features/Features";
+import Possibility from "./assets/containers/possibility/Possibility";
+import Cta from "./assets/Components/cta/Cta";
+import Blog from "./assets/containers/blog/Blog";
+import Footer from "./assets/containers/footer/Footer";
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
-    <>
+    <div className="App">
+      <div className="gradient__bg">
+        <Navbar></Navbar>
+        <Header></Header>
+      </div>
       <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
+        <Brand></Brand>
+        <WhatGpt3></WhatGpt3>
+        <Features></Features>
+        <Possibility></Possibility>
+        <Cta></Cta>
+        <Blog></Blog>
+        <Footer></Footer>
       </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
+    </div>
+  );
 }
 
-export default App
+export default App;
