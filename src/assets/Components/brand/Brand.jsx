@@ -3,7 +3,7 @@ import './brand.css'
 
 const Brand = () => {
   return (
-    <div>
+    <div className='gpt3__brand section__padding'>
       <h1>brand</h1>
     </div>
   );

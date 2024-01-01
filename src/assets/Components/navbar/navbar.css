@@ -1,14 +1,19 @@
 .gpt3__navbar{
   display: flex;
-  justify-content: space-between;
+ 
   align-items: center;
   padding: 2rem 6rem;
 }
-
-.gpt3__navbar-links{
-  flex:1;
+.gpt3-left{
   display: flex;
-  justify-content: flex-start;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.gpt3__navbar-links{
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
   align-items: center;
 }
 .gpt3__navbar-links_logo{
@@ -96,10 +101,16 @@
   .gpt3__navbar-menu{
     display: flex;
   }
+  .gpt3__navbar-sign{
+    display: none;
+  }
 }
 @media screen and (max-width: 700px) {
   .gpt3__navbar{
     padding: 2rem 4rem;
+  }
+  .gpt3__navbar-sign{
+    display: none;
   }
 }
 

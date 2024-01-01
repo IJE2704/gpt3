@@ -25,41 +25,45 @@ const Navbar = () => {
   return (
     <div className="gpt3__navbar">
       <div className="gpt3__navbar-links">
-        <div className="gpt3__navbar-links_logo">
-          <img src="https://i.ibb.co/pRTZjgW/logo.png" alt="" />
+        <div className="gpt3-left">
+          <div className="gpt3__navbar-links_logo">
+            <img src="https://i.ibb.co/pRTZjgW/logo.png" alt="" />
+          </div>
+          <div className="gpt3__navbar-links_container">
+            <Menu />
+          </div>
         </div>
-        <div className="gpt3__navbar-links_container">
-          <Menu />
-        </div>
-        <div className="gpt3__navbar-sign">
-          <p>Sign in</p>
-          <button type="button">Sign Up</button>
-        </div>
-        <div className="gpt3__navbar-menu">
-          {toggleMenu ? (
-            <RiCloseLine
-              color="#fff"
-              size={27}
-              onClick={() => setToggleMenu(false)}
-            />
-          ) : (
-            <RiMenu3Line
-              color="#fff"
-              size={27}
-              onClick={() => setToggleMenu(true)}
-            />
-          )}
-          {toggleMenu && (
-            <div className="gpt3__navbar-menu_container scale-up-center">
-              <div className="gpt3__navbar-menu_container-links">
-                <Menu />
-                <div className="gpt3__navbar-menu_container-links-sign">
-                  <p>Sign in</p>
-                  <button type="button">Sign Up</button>
+        <div className="gpt3-right">
+          <div className="gpt3__navbar-sign">
+            <p>Sign in</p>
+            <button type="button">Sign Up</button>
+          </div>
+          <div className="gpt3__navbar-menu">
+            {toggleMenu ? (
+              <RiCloseLine
+                color="#fff"
+                size={27}
+                onClick={() => setToggleMenu(false)}
+              />
+            ) : (
+              <RiMenu3Line
+                color="#fff"
+                size={27}
+                onClick={() => setToggleMenu(true)}
+              />
+            )}
+            {toggleMenu && (
+              <div className="gpt3__navbar-menu_container scale-up-center">
+                <div className="gpt3__navbar-menu_container-links">
+                  <Menu />
+                  <div className="gpt3__navbar-menu_container-links-sign">
+                    <p>Sign in</p>
+                    <button type="button">Sign Up</button>
+                  </div>
                 </div>
               </div>
-            </div>
-          )}
+            )}
+          </div>
         </div>
       </div>
     </div>
